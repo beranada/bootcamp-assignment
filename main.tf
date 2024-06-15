@@ -95,7 +95,6 @@ resource "azurerm_windows_virtual_machine" "vm" {
   }
 }
 
-
 # # Retrieve VM identity principal ID
 # data "azurerm_user_assigned_identity" "vm_identity" {
 #   name                = azurerm_windows_virtual_machine.vm.name

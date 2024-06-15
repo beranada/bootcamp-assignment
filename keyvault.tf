@@ -31,8 +31,6 @@ resource "azurerm_role_assignment" "key_vault_reader" {
   principal_id         = "9ff1a86b-180b-40fd-bb20-f35916113f0e"
 }
 
-
-
 resource "azurerm_private_endpoint" "keyvault_private_endpoint" {
   name                = "ab-keyvault-pe-bootcamp"
   location            = azurerm_resource_group.rg.location
