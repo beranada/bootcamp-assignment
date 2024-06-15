@@ -19,28 +19,3 @@ resource "azurerm_postgresql_flexible_server" "postgresql" {
   private_dns_zone_id = azurerm_private_dns_zone.postgresql.id
 
   depends_on = [azurerm_private_dns_zone_virtual_network_link.postgresql_link]
-
-  # authentication {
-  #   active_directory_auth_enabled = true
-  #   tenant_id                     = data.azurerm_client_config.current.tenant_id
-  # }
-
-
-  #   # Enable Azure AD authentication
-  #   identity {
-  #     type = "SystemAssigned"
-  #   }
-
-  #   tags = {
-  #     environment = "bootcamp"
-  #   }
-}
-
-# resource "azurerm_postgresql_flexible_server_active_directory_administrator" "example2" {
-#   server_name         = azurerm_postgresql_flexible_server.postgresql.name
-#   resource_group_name = azurerm_resource_group.rg.name
-#   tenant_id           = data.azurerm_client_config.current.tenant_id
-#   object_id           = "9ff1a86b-180b-40fd-bb20-f35916113f0e"
-#   principal_name      = "adam.beranek_tietoevry.com#EXT#@tietoevryedu.onmicrosoft.com"
-#   principal_type      = "ServicePrincipal"
-# }
